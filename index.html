@@ -4,10 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://github.com/SenciZ/devduds/public/index.html">
-    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../resources/DevDudsIcon.png" type="image/x-icon">
+    <title>DevDuds</title>
 </head>
 <body>
-    
+    <header class="header" id="header">
+        <nav class="navBar" id="navBar">
+            <div class="logoContainer" id="logoContainer"><img src="../resources/DevDuds Logo.png" alt="DevDuds Logo" id="mainLogo"></div>
+            <div class="navContainer" id="navContainer">
+                <div class="logoContainer2" id="logoContainer2"><img src="../resources/DevDuds Logo.png" alt="DevDuds Logo" id="mainLogo2"></div>
+                <ul id="navList">
+                    <li class="itemLink"><a href="#">HOME</a></li>
+                    <li class="itemLink"><a href="#">MENS</a></li>
+                    <li class="itemLink"><a href="#">WOMENS</a></li>
+                    <li class="itemLink"><a href="#">ACCESSORIES</a></li>
+                    <li class="itemLink"><a href="#">CONTACT US</a></li>
+                </ul>
+            </div>
+            
+            <div class="searchContainer">
+                <div id="loginSignupText"><p>Shop easier with DevDuds<span class="logSignText"><a href="#"> login</a></span> or<span class="logSignText"> <a href="#">sign up</a></span></p></div>
+                <div id="searchInputContainer"><input type="text" placeholder="Search Store..."><span class="material-icons">search</span></div>
+            </div>
+            <div id="cartContainer">
+                <p id="cartItemNumber">3</p><span class="material-icons">shopping_cart</span>
+            </div>
+        </nav>
+        <div id="specialsContainer">
+            <div id="specialsInternalContainer">
+                <span class="material-icons">chevron_left</span>
+            <div id="specialsListContainer"><p><span class="material-icons-outlined">local_shipping</span>Free shipping on all t-shirts from now through January 1st</p></div><span class="material-icons">chevron_right</span>
+            </div>
+        </div>
+        <div id="hero">
+            <div id="heroContainer">
+                <div id="heroTextContainer">
+                    <img src="../resources/HeroText.png" alt="2022 summer styles are now available">
+                </div>
+                <div id="womanContainer">
+                    <img src="../resources/ImageOfWoman.png" alt="Young woman modeling tank top">
+                </div>
+            </div>
+            <div id="hero2"></div>
+        </div>
+    </header>
+    <main id="mainPage">
+
+    </main>
+    <section id="subscribeField">
+            <form id="subscribeForm">
+                <div id="subscribeInputContainer"><input type="text" placeholder="Subscribe to DevDuds weekly specials list"><button id="subscribeButton">Subscribe</button></div>
+            </form>
+    </section>
+    <footer id="footer">
+
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js" ></script>
 </body>
 </html>
