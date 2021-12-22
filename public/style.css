@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --primary: #193460;
+  --secondary: #ff9a04;
+  --tertiary: #40b3f3;
+  --soft: #e8e8e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  /* min-height: 125px; */
+  /* background-color: aqua; */
+}
+
+#mainLogo {
+  display: flex;
+  justify-content: end;
+}
+#navBar {
+  display: flex;
+  align-items: flex-end;
+  width: 90vw;
+  height: 125px;
+}
+
+#logoContainer #mainLogo {
+  max-width: 20vw;
+  min-width: 250px;
+  flex-shrink: 1;
+}
+
+#logoContainer2 {
+  display: none;
+}
+
+#navContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 125px;
+}
+
+#navList {
+  width: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.itemLink {
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 14px;
+}
+@media only screen and (max-width: 1150px) {
+  #logoContainer #mainLogo {
+    display: none;
+  }
+
+  #navContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  #navList {
+    width: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .itemLink {
+    margin-right: 20px;
+  }
+  #logoContainer2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #logoContainer2 img {
+    width: 20vw;
+    min-width: 200px;
+  }
+}
+.itemLink:hover {
+  color: var(--tertiary);
+}
+
+#loginSignupText p {
+  font-size: smaller;
+  font-weight: 200;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 19px;
+  max-width: 350px;
+  min-width: 250px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+#loginSignupText span {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--tertiary);
+}
+
+#searchInputContainer {
+  margin-top: 25px;
+  padding-right: 10px;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  border-radius: 50px;
+  height: 35px;
+  width: 100%;
+  border: 1px var(--soft) solid;
+  justify-content: space-between;
+  box-shadow: -1px 2px 5px -5px;
+}
+
+#searchInputContainer input {
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  border-radius: 40px;
+  height: 30px;
+  width: 80%;
+}
+
+#searchInputContainer input::placeholder {
+  font-size: 15px;
+  color: var(--soft);
+}
+
+#cartContainer {
+  height: 35px;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+#cartItemNumber {
+  color: var(--secondary);
+}
+
+#specialsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--soft);
+  width: 100vw;
+  height: 75px;
+  margin-top: 30px;
+}
+
+#specialsInternalContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#specialsListContainer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 80px;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+#specialsListContainer span {
+  margin-right: 10px;
+}
+
+#hero {
+  position: relative;
+  width: 100vw;
+  background-color: var(--secondary);
+  height: calc(100vh - 230px);
+  display: flex;
+  justify-content: center;
+}
+
+#hero2 {
+  width: 100vw;
+  position: absolute;
+  left: 24vw;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255, 0.7) 20%,
+    var(--secondary) 40%
+  );
+  z-index: 0;
+}
+
+#heroContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90vw;
+  height: 100%;
+  z-index: 1;
+}
+
+#womanContainer {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  min-width: 20vw;
+  margin-right: 0;
+  height: 100%;
+  max-height: 100%;
+  /* object-fit: cover; */
+}
+
+#womanContainer img {
+  height: 100%;
+  object-fit: cover;
+}
+
+#heroTextContainer {
+  overflow: hidden;
+  display: flex;
+  /* width: 90%; */
+}
+
+#heroTextContainer img {
+  width: 100%;
+  height: auto;
+}
+
+#footer {
+  width: 100vw;
+  height: 500px;
+  background-color: var(--primary);
+}
+
+#mainPage {
+  width: 100vw;
+  height: 1500px;
+  background-color: white;
+}
+
+#subscribeField {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--soft);
+  width: 100vw;
+  height: 150px;
+  margin-top: 30px;
+  /* padding-right: 50px; */
+}
+
+#subscribeForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+}
+
+#subscribeInputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 50px;
+  height: 51px;
+  width: inherit;
+  max-width: 550px;
+  background-color: white;
+  border: 1px var(--soft) solid;
+  justify-content: space-between;
+  box-shadow: -1px 2px 5px -5px;
+}
+
+#subscribeInputContainer input {
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  border-radius: 40px;
+  height: 30px;
+  width: 80%;
+}
+
+#subscribeButton {
+  color: white;
+  background-color: var(--secondary);
+  outline: none;
+  border: none;
+  border-radius: 60px;
+  height: 80%;
+  width: 140px;
+  cursor: pointer;
+}
+
+#subscribeButton:hover {
+  background-color: var(--tertiary);
+}
+
+#subscribeInputContainer input::placeholder {
+  font-size: 15px;
+  color: var(--soft);
+}
