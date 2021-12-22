@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-
+const ctrl = require('./controller')
 const app = express();
 
 app.get('/', (req, res)=>{
