@@ -8,6 +8,10 @@ app.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, '../index.html'))
 })
 
+app.get('/viewItem', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../viewItem.html'))
+})
+
 app.get('/css', (req, res)=>{
     res.sendFile(path.join(__dirname, '../style.css'))
 })
