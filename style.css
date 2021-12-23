@@ -235,28 +235,21 @@ body {
   height: 100%;
   z-index: 1;
 }
-#heroContainer img{
-  max-height: 100%;
-  max-width: 100%;
-}
 
 #womanContainer {
   display: flex;
   justify-content: center;
-  height: inherit;
-  /* width: auto; */
-  /* min-width: 20vw; */
-  /* margin-right: 0;
+  width: auto;
+  min-width: 20vw;
+  margin-right: 0;
   height: 100%;
-  max-height: 100%; */
+  max-height: 100%;
   /* object-fit: cover; */
 }
 
 #womanContainer img {
-  max-height: 100%;
-  min-width: 100%;
-
-  /* object-fit: cover; */
+  height: 100%;
+  object-fit: cover;
 }
 
 #heroTextContainer {
@@ -267,7 +260,7 @@ body {
 
 #heroTextContainer img {
   width: 100%;
-  height: auto;
+  height: 80%;
 }
 
 #footer {
