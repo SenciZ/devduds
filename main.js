@@ -12,7 +12,7 @@ let productItemContainer = document.getElementById('itemContainer')
 
 
 function getAllProducts(){
-    axios.get('http://localhost:4005/products')
+    axios.get('/products')
     .then(res =>{
         res.data.forEach(item =>{
             // console.log(item)
