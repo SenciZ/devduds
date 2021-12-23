@@ -8,7 +8,7 @@ app.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, '../index.html'))
 })
 
-app.get('/viewItem', (req, res)=>{
+app.get('/viewItem.html', (req, res)=>{
     res.sendFile(path.join(__dirname, '../viewItem.html'))
 })
 
