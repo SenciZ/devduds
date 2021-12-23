@@ -16,12 +16,20 @@ app.get('/css', (req, res)=>{
     res.sendFile(path.join(__dirname, '../style.css'))
 })
 
+app.get('/viewPagecss', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../viewPage.css'))
+})
+
 app.get('/cssreset', (req, res)=>{
     res.sendFile(path.join(__dirname, '../reset.css'))
 })
 
 app.get('/js', (req, res)=>{
     res.sendFile(path.join(__dirname, '../main.js'))
+})
+
+app.get('/viewjs', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../viewPage.js'))
 })
 
 app.post('/seed', seed)
