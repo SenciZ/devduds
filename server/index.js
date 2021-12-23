@@ -9,7 +9,7 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/viewItem', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../viewItem.html'))
+    res.sendFile(path.join(__dirname, '../viewItem'))
 })
 
 app.get('/css', (req, res)=>{
