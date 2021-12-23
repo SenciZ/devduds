@@ -48,7 +48,7 @@ function listProductNames(item){
 function itemViewPage(e){
     console.log(e.currentTarget)
     window.localStorage.setItem('itemViewID', e.currentTarget.id)
-    window.location.href = '/viewItem'
+    window.location.href = '/viewItem.html'
 }
 
 getAllProducts()
