@@ -235,6 +235,10 @@ body {
   height: 100%;
   z-index: 1;
 }
+#heroContainer img{
+  max-height: 100%;
+  max-width: 100%;
+}
 
 #womanContainer {
   display: flex;
