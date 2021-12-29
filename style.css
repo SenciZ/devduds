@@ -54,19 +54,18 @@ body {
 }
 
 #navContainer {
-  min-width: 50%;
-  max-width: 100%;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: flex-end;
   height: 125px;
 }
 
 #navList {
+  width: inherit;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 90%;
 }
 
 .itemLink {
@@ -103,7 +102,7 @@ body {
   }
   #logoContainer2 img {
     width: 20vw;
-    min-width: 230px;
+    min-width: 200px;
   }
 }
 .itemLink:hover {
@@ -111,7 +110,7 @@ body {
 }
 
 #loginSignupText p {
-  font-size: clamp(11px, 14px, 1vw);
+  font-size: smaller;
   font-weight: 200;
 }
 
@@ -120,8 +119,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding-left: 19px; */
-  max-width: 100%;
+  padding-left: 19px;
+  max-width: 350px;
+  min-width: 250px;
+  width: 100%;
   margin-right: 10px;
 }
 
@@ -137,7 +138,7 @@ body {
   padding-left: 50px;
   display: flex;
   align-items: center;
-  padding-left: 5px;
+  padding-left: 10px;
   border-radius: 50px;
   height: 35px;
   width: 100%;
@@ -156,7 +157,7 @@ body {
 }
 
 #searchInputContainer input::placeholder {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--soft);
 }
 
@@ -166,7 +167,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-left: 5px; */
+  margin-left: 5px;
 }
 
 #cartItemNumber {
@@ -214,6 +215,8 @@ body {
 
 #hero2 {
   width: 100%;
+  position: absolute;
+  /* left: 24vw; */
   height: 100%;
   overflow: hidden;
   background: radial-gradient(
@@ -221,7 +224,6 @@ body {
     rgb(255, 255, 255, 0.7) 20%,
     var(--secondary) 40%
   );
-  background-position: right;
   z-index: 0;
 }
 
@@ -259,16 +261,6 @@ body {
 #heroTextContainer img {
   width: 100%;
   height: 80%;
-}
-
-@media only screen and (max-width: 1150px) {
-  #womanContainer {
-    display: none;
-  }
-
-  #navList{
-    display: none;
-  }
 }
 
 #footer {
