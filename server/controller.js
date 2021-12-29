@@ -17,7 +17,7 @@ module.exports = {
 
 
     getAllProducts: (req, res) =>{
-        sequelize.query(`SELECT * FROM products;`)
+        sequelize.query(`SELECT * FROM products ORDER BY RANDOM();`)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
     }
