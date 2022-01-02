@@ -20,6 +20,18 @@ module.exports = {
         sequelize.query(`SELECT * FROM products ORDER BY RANDOM();`)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
+    },
+
+    getAllMenProducts: (req, res) =>{
+        sequelize.query(`SELECT * FROM products WHERE product_category_id=1;`)
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
+    },
+
+    getAllWomensProducts: (req, res) =>{
+        sequelize.query(`SELECT * FROM products WHERE product_category_id=2;`)
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
     }
 
     // getPendingAppointments: (req, res)=>{

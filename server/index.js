@@ -12,6 +12,14 @@ app.get('/index.html', (req, res)=>{
     res.sendFile(path.join(__dirname, '../index.html'))
 })
 
+app.get('/mens.html', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../mens.html'))
+})
+
+app.get('/womens.html', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../womens.html'))
+})
+
 app.get('/viewItem.html', (req, res)=>{
     res.sendFile(path.join(__dirname, '../viewItem.html'))
 })
@@ -36,9 +44,23 @@ app.get('/viewjs', (req, res)=>{
     res.sendFile(path.join(__dirname, '../viewPage.js'))
 })
 
+app.get('/mensjs', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../mensjs.js'))
+})
+
+app.get('/womensjs', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../womensjs.js'))
+})
+
 app.post('/seed', seed)
 
 app.get('/products', ctrl.getAllProducts)
+
+app.get('/menproducts', ctrl.getAllMenProducts)
+
+app.get('/womensproducts', ctrl.getAllWomensProducts)
+
+
 
 
 
