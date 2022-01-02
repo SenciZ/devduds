@@ -35,6 +35,7 @@ function listProductNames(item){
     productItemPrice.className = 'itemPrice'
     productItemPrice.textContent = `${item.product_price}`
     const productDescription = document.createElement('p')
+    productDescription.className = 'itemDescription'
     productDescription.textContent = `${item.product_description}`
     productInfoContainer.appendChild(productItemTitle)
     productInfoContainer.appendChild(productItemPrice)
