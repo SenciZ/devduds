@@ -19,6 +19,7 @@ module.exports = {
       .query(
         `drop table if exists products;
         drop table if exists featured;
+        drop table if exists subscribe_list;
         drop table if exists product_category;
 
 
@@ -26,6 +27,11 @@ module.exports = {
             product_category_id serial primary key, 
             category_name varchar(30)
         );
+
+        create table subscribe_list (
+          subscriber_id serial primary key, 
+          subscriber_email varchar(100)
+      );
 
         create table featured (
           featured_id serial primary key,
@@ -50,6 +56,8 @@ module.exports = {
         ('Womens Shirts'),
         ('Acccessories');
         
+        insert into subscribe_list (subscriber_email)
+        values ('senad@gmail.com');
 
         insert into products (product_name, product_description, product_price, image_url, product_category_id)
         values 

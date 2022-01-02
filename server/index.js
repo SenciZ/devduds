@@ -63,6 +63,7 @@ app.get('/menproducts', ctrl.getAllMenProducts)
 
 app.get('/womensproducts', ctrl.getAllWomensProducts)
 
+app.post('/subscribe', ctrl.subscribe)
 
 
 

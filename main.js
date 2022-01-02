@@ -10,6 +10,8 @@
 // }
 let productItemContainer = document.getElementById('itemContainer')
 
+let subscriberForm = document.getElementById('subscribeForm')
+subscriberForm.addEventListener('submit', addNewSubscriber)
 
 function getFeaturedProducts(){
     axios.get('/featuredproducts')
@@ -20,6 +22,18 @@ function getFeaturedProducts(){
         })
     })
     .catch(err => console.log(err))
+}
+
+function addNewSubscriber(e){
+    e.preventDefault();
+    let subscribeField = document.getElementById('newEmail')
+
+    let email = subscribeField.value;
+    console.log({email})
+    axios.post('/subscribe', { email })
+    .then(console.log("New Subscriber Added"))
+    .catch((err) => console.log(err));
+  subscribeField.value = "";
 }
 
 

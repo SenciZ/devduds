@@ -38,6 +38,14 @@ module.exports = {
         sequelize.query(`SELECT * FROM products WHERE product_category_id=2 ORDER BY RANDOM();;`)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
+    },
+
+    subscribe: (req, res) =>{
+        const newSubscriber = req.body.email;
+        console.log(req.body.email)
+        sequelize.query(`INSERT INTO subscribe_list(subscriber_email) VALUES('${newSubscriber}')`)
+        .then((dbRes) => res.status(200).send(dbRes))
+        .catch(err => console.log(err))
     }
 
     // getPendingAppointments: (req, res)=>{
