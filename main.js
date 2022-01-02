@@ -1,18 +1,4 @@
-// class StoreItem{
-//     constructor(id, name, description, price, imageURL,category){
-//         this.id = id
-//         this.name = name
-//         this.description = description
-//         this.price = +price
-//         this.imageURL = imageURL
-//         this.category = category
-//     }
-// }
-// if(window.localStorage.getItem('cartCount') !== 0){
-//     window.localStorage.setItem('cartCount', window.localStorage.setItem('cartCount'))
-// } else {
-//     window.localStorage.setItem('cartCount', 0)
-// }
+
 
 let productItemContainer = document.getElementById('itemContainer')
 
@@ -73,4 +59,11 @@ function itemViewPage(e){
 getFeaturedProducts()
 
 const cartCount = document.getElementById('cartItemNumber')
-cartCount.textContent = window.localStorage.getItem('cartCount')
+ 
+if(window.localStorage.getItem('cartCount')){
+    window.localStorage.setItem('cartCount', window.localStorage.getItem('cartCount'))
+    cartCount.textContent = window.localStorage.getItem('cartCount')
+} else {
+    window.localStorage.setItem('cartCount', 0)
+    cartCount.textContent = window.localStorage.getItem('cartCount')
+}
