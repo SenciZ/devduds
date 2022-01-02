@@ -28,8 +28,8 @@ app.get('/css', (req, res)=>{
     res.sendFile(path.join(__dirname, '../style.css'))
 })
 
-app.get('/viewPagecss', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../viewPage.css'))
+app.get('/viewItemcss', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../viewItem.css'))
 })
 
 app.get('/cssreset', (req, res)=>{
@@ -40,8 +40,8 @@ app.get('/js', (req, res)=>{
     res.sendFile(path.join(__dirname, '../main.js'))
 })
 
-app.get('/viewjs', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../viewPage.js'))
+app.get('/viewItem', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../viewItem.js'))
 })
 
 app.get('/mensjs', (req, res)=>{
@@ -58,6 +58,7 @@ app.get('/products', ctrl.getAllProducts)
 
 app.get('/featuredproducts', ctrl.getFeaturedProducts)
 
+app.get('/clickedproduct:id', ctrl.getClickedProduct)
 
 app.get('/menproducts', ctrl.getAllMenProducts)
 

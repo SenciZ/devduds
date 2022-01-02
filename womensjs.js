@@ -41,5 +41,7 @@ function itemViewPage(e){
     window.localStorage.setItem('itemViewID', e.currentTarget.id)
     window.location.href = '/viewItem.html'
 }
+const cartCount = document.getElementById('cartItemNumber')
+cartCount.textContent = window.localStorage.getItem('cartCount')
 
 getAllWomensProducts()

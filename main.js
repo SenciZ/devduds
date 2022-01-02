@@ -8,6 +8,12 @@
 //         this.category = category
 //     }
 // }
+// if(window.localStorage.getItem('cartCount') !== 0){
+//     window.localStorage.setItem('cartCount', window.localStorage.setItem('cartCount'))
+// } else {
+//     window.localStorage.setItem('cartCount', 0)
+// }
+
 let productItemContainer = document.getElementById('itemContainer')
 
 let subscriberForm = document.getElementById('subscribeForm')
@@ -64,5 +70,7 @@ function itemViewPage(e){
     window.localStorage.setItem('itemViewID', e.currentTarget.id)
     window.location.href = '/viewItem.html'
 }
-
 getFeaturedProducts()
+
+const cartCount = document.getElementById('cartItemNumber')
+cartCount.textContent = window.localStorage.getItem('cartCount')

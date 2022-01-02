@@ -29,13 +29,20 @@ module.exports = {
     },
 
     getAllMenProducts: (req, res) =>{
-        sequelize.query(`SELECT * FROM products WHERE product_category_id=1 ORDER BY RANDOM();;`)
+        sequelize.query(`SELECT * FROM products WHERE product_category_id=1 ORDER BY RANDOM();`)
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
+    },
+
+    getClickedProduct: (req, res) =>{
+        const {id} = req.params;
+        sequelize.query(`SELECT * FROM products WHERE product_id=${id};`)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
     },
 
     getAllWomensProducts: (req, res) =>{
-        sequelize.query(`SELECT * FROM products WHERE product_category_id=2 ORDER BY RANDOM();;`)
+        sequelize.query(`SELECT * FROM products WHERE product_category_id=2 ORDER BY RANDOM();`)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
     },
@@ -43,7 +50,7 @@ module.exports = {
     subscribe: (req, res) =>{
         const newSubscriber = req.body.email;
         console.log(req.body.email)
-        sequelize.query(`INSERT INTO subscribe_list(subscriber_email) VALUES('${newSubscriber}')`)
+        sequelize.query(`INSERT INTO subscribe_list(subscriber_email) VALUES('${newSubscriber}');`)
         .then((dbRes) => res.status(200).send(dbRes))
         .catch(err => console.log(err))
     }
