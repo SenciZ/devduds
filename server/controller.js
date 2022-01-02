@@ -22,14 +22,20 @@ module.exports = {
         .catch(err => console.log(err))
     },
 
+    getFeaturedProducts: (req, res) =>{
+        sequelize.query(`SELECT * FROM featured ORDER BY RANDOM();`)
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
+    },
+
     getAllMenProducts: (req, res) =>{
-        sequelize.query(`SELECT * FROM products WHERE product_category_id=1;`)
+        sequelize.query(`SELECT * FROM products WHERE product_category_id=1 ORDER BY RANDOM();;`)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
     },
 
     getAllWomensProducts: (req, res) =>{
-        sequelize.query(`SELECT * FROM products WHERE product_category_id=2;`)
+        sequelize.query(`SELECT * FROM products WHERE product_category_id=2 ORDER BY RANDOM();;`)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
     }

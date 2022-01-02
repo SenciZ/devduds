@@ -18,12 +18,23 @@ module.exports = {
     sequelize
       .query(
         `drop table if exists products;
+        drop table if exists featured;
         drop table if exists product_category;
+
 
         create table product_category (
             product_category_id serial primary key, 
             category_name varchar(30)
         );
+
+        create table featured (
+          featured_id serial primary key,
+            featured_name varchar(60),
+            featured_description varchar(500),
+            featured_price varchar(10),
+            image_url varchar(200),
+            featured_category_id integer references product_category(product_category_id) 
+      );
 
         create table products (
             product_id serial primary key,
@@ -166,6 +177,22 @@ module.exports = {
         ('Royal PostgreSQL T-Shirt', 'You know React is your favorite', '26.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/postgres-royal-wm.png?raw=true', '2'),
         ('Lime PostgreSQL T-Shirt', 'You know React is your favorite', '26.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/postgres-lime-wm.png?raw=true', '2'),
         ('Black PostgreSQL T-Shirt', 'You know React is your favorite', '26.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/postgres-black-wm.png?raw=true', '2')
+        ;
+        
+        insert into featured (featured_name, featured_description, featured_price, image_url, featured_category_id)
+        values 
+        ('PHP T-Shirt', 'You know React is your favorite', '27.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/php-carolina.png?raw=true', '1'),
+        ('HTML T-Shirt', 'You know React is your favorite', '27.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/html-black.png?raw=true', '1'),
+        ('CSS T-Shirt', 'You know React is your favorite', '27.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/css-heather.png?raw=true', '1'),
+        ('Gold JS T-Shirt', 'You know React is your favorite', '27.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/js-gold.png?raw=true', '1'),
+
+        ('Gray PostgreSQL T-Shirt', 'You know React is your favorite', '26.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/postgres-gray-wm.png?raw=true', '2'),
+        ('Black JS T-Shirt', 'You know React is your favorite', '26.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/js-black-wm.png?raw=true', '2'),
+        ('Black Node T-Shirt', 'You know React is your favorite', '26.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/node-black-wm.png?raw=true', '2'),
+        ('Saphire React T-Shirt', 'You know React is your favorite', '27.99', 'https://github.com/SenciZ/devduds/blob/main/resources/Products/react-saphire.png?raw=true', '1')
+
+
+
         ;`)
       .then(() => {
         console.log("DB seeded!");

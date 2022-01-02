@@ -56,6 +56,9 @@ app.post('/seed', seed)
 
 app.get('/products', ctrl.getAllProducts)
 
+app.get('/featuredproducts', ctrl.getFeaturedProducts)
+
+
 app.get('/menproducts', ctrl.getAllMenProducts)
 
 app.get('/womensproducts', ctrl.getAllWomensProducts)
