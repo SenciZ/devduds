@@ -19,10 +19,9 @@ function getFeaturedProducts(){
 function addNewSubscriber(e){
     e.preventDefault();
     let subscribeField = document.getElementById('newEmail')
-
     let email = subscribeField.value;
     console.log({email})
-    axios.post('/subscribe', { email })
+    axios.post('/subscribe', {email})
     .then(console.log("New Subscriber Added"))
     .catch((err) => console.log(err));
   subscribeField.value = "";

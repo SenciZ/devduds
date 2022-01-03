@@ -48,7 +48,7 @@ module.exports = {
     },
 
     subscribe: (req, res) =>{
-        const newSubscriber = req.body.email;
+        let newSubscriber = req.body.email;
         console.log(req.body.email)
         sequelize.query(`INSERT INTO subscribe_list(subscriber_email) VALUES('${newSubscriber}');`)
         .then((dbRes) => res.status(200).send(dbRes))
