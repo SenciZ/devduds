@@ -265,7 +265,7 @@ body {
 
 #footer {
   width: 100%;
-  height: 500px;
+  min-height: 15vh;
   background-color: var(--primary);
 }
 
@@ -356,6 +356,7 @@ body {
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 90%;
+  margin: 0 auto;;
 }
 
 #titleContainer h1{
@@ -430,4 +431,20 @@ body {
 .addToCartBtn:hover{
   background-color: var(--tertiary);
   color: white;
+}
+
+#footer{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+#footer ul li{
+  display: block;
+  color: white;
+}
+
+#footer #searchInputContainer{
+  background-color: white;
 }
