@@ -6,7 +6,7 @@
 
 Thanks for checking out this repository.
 
-View the live preview at: https://https://devduds.herokuapp.com/
+View the live preview at: https://devduds.herokuapp.com/
 
 ## The Website
 
