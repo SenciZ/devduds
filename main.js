@@ -66,3 +66,12 @@ if(window.localStorage.getItem('cartCount')){
     window.localStorage.setItem('cartCount', 0)
     cartCount.textContent = window.localStorage.getItem('cartCount')
 }
+
+
+let cartIcon=document.getElementById('cartContainer')
+cartIcon.addEventListener("click", resetCart)
+
+function resetCart(){
+    window.localStorage.setItem('cartCount', 0)
+    cartCount.textContent = window.localStorage.getItem('cartCount')
+}
