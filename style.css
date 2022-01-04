@@ -211,12 +211,13 @@ body {
   height: calc(100vh - 230px);
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 #hero2 {
   width: 100%;
   position: absolute;
-  /* left: 24vw; */
+  left: 20vw;
   height: 100%;
   overflow: hidden;
   background: radial-gradient(
@@ -229,7 +230,7 @@ body {
 
 #heroContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 90vw;
   height: 100%;
@@ -356,7 +357,7 @@ body {
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 90%;
-  margin: 0 auto;;
+  margin: 50px auto;;
 }
 
 #titleContainer h1{
