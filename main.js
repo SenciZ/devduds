@@ -74,3 +74,4 @@ function resetCart() {
   window.localStorage.setItem("cartCount", 0);
   cartCount.textContent = window.localStorage.getItem("cartCount");
 }
+
